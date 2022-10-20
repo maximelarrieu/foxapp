@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title_page %} - Connexion {% endblock title_page %}
+
+{% block title_h1 %} Connexion {% endblock title_h1 %}
+
+{% block content %}
+    <i>{{ message }}</i>
+    <form method="post">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <button type="submit">Se connecter</button>
+    </form>
+    <p>Pas encore membre ? <a href="{% url 'register' %}">Inscrivez-vous maintenant !</a></p>
+{% endblock content %}
