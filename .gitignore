@@ -3,3 +3,5 @@ venv/
 foxapp/__pycache__/
 custom_auth/__pycache__/
 custom_auth/migrations/__pycache__/
+user_profile/__pycache__/
+user_profile/migrations/__pycache__/
