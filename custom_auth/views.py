@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.views.generic import View
-from django.conf import settings
 
 from . import forms
 
@@ -15,7 +14,7 @@ def register_page(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return redirect('login')
+            return redirect('profile')
     return render(request, 'custom_auth/register.html', context={'form': form})
 
 
@@ -42,7 +41,6 @@ class LoginPageView(View):
             )
             if user is not None:
                 login(request, user)
-                # message = f'Bonjour {user.username}! Vous êtes connecté.'
                 return redirect('profile')
         message = 'Identifiants invalides'
         return render(request, self.template, context={'form': form, 'message': message})
