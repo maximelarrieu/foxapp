@@ -42,6 +42,7 @@ class LoginPageView(View):
             )
             if user is not None:
                 login(request, user)
-                message = f'Bonjour {user.username}! Vous êtes connecté.'
+                # message = f'Bonjour {user.username}! Vous êtes connecté.'
+                return redirect('profile')
         message = 'Identifiants invalides'
         return render(request, self.template, context={'form': form, 'message': message})
