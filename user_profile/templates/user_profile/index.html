@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'base.html' %}
 
-</body>
-</html>
+{% block title_page %} - Profil {% endblock title_page %}
+
+{% block title_h1 %} Profil {{ user.username }} {% endblock title_h1 %}
+
+{% block content %}
+
+  <p>Bienvenue sur votre profil</p>
+
+{% endblock content %}
