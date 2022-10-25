@@ -9,7 +9,7 @@
     <form method="post">
         {{ form.as_p }}
         {% csrf_token %}
-        <button type="submit">Se connecter</button>
+        <button type="submit" class="btn btn-success">Se connecter</button>
     </form>
     <p>Pas encore membre ? <a href="{% url 'register' %}">Inscrivez-vous maintenant !</a></p>
 {% endblock content %}
