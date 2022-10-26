@@ -5,3 +5,5 @@ custom_auth/__pycache__/
 custom_auth/migrations/__pycache__/
 user_profile/__pycache__/
 user_profile/migrations/__pycache__/
+binance_endpoints/__pycache__/
+binance_endpoints/migrations/__pycache__/
