@@ -26,7 +26,6 @@ def btc_price(request):
 
     # mining_account_list = client.mining_account_list("sha256", "450267197")
     # print("mining account", mining_account_list)
-
     nft = client.nft_transaction_history(0)
 
     stacking = client.staking_product_list("STAKING")
