@@ -1,19 +1,20 @@
 <p>BTCUSDT Price : {{ btcusdt_price }}</p>
 <!-- TODO template à part pour "gallery nft" -->
-<p>NFT : {{ nft }}</p>
 <ul>
     {% for s in stacking %}
         <li>{{ s.projectId }} - asset: {{ s.detail.asset }} / apy : {{ s.detail.apy }} => quota : {{ s.quota.totalPersonalQuota }}</li>
     {% endfor %}
 </ul>
 
-<ul>
-    {% for e in exchange %}
+<p>NFT: {{ nft }}</p>
 
-    {% endfor %}
-</ul>
-<p>exchange: {{ exchange }}</p>
+<!--<ul>-->
+<!--    {% for e in exchange %}-->
+
+<!--    {% endfor %}-->
+<!--</ul>-->
+<!--<p>exchange: {{ exchange }}</p>-->
 
 
-<p>User assets : {{ user_assets }}</p>
+<!--<p>User assets : {{ user_assets }}</p>-->
 <p>mining?? {{ mining_account_list }}</p>

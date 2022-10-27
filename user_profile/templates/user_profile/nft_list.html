@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <p>My NFT list : {{ nft_transaction_history.total }}</p>
+
+    {% if nft_transaction_history.total == 0 %}
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="https://picsum.photos/200" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title"><i>Vous ne possédez pas de nft.</i></h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+    {% else %}
+        {% for nft in nft_transaction_history.list %}
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="https://picsum.photos/200" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">{{ orderNo }}</h5>
+                <p class="card-text">{{ tradeAmount }} - {{ tradeCurrency }}</p>
+              </div>
+            </div>
+        {% endfor %}
+    {% endif %}
+{% endblock content %}

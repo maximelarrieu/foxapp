@@ -26,5 +26,6 @@ urlpatterns = [
     path('login/', custom_auth.LoginPageView.as_view(), name='login'),
     path('logout/', custom_auth.logout_user, name='logout'),
     path('profile/', profile.profile_page, name='profile'),
-    path('binance/', binance.btc_price, name='binance')
+    path('binance/', binance.btc_price, name='binance'),
+    path('nft_list/', profile.nft_transaction_history, name='nft_list')
 ]
